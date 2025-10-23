@@ -1,0 +1,96 @@
+# [Project Name]
+
+> [One-sentence description of what this project does and its core technology]
+
+## Project Overview
+
+**Tech Stack**: [List key technologies]
+**Status**: [Development stage - e.g., Production-ready, In development, Beta]
+**Purpose**: [What problem this solves]
+
+---
+
+## Core Documentation
+
+### README.md
+[Description following format: What it covers, when to read it, why it matters]
+
+### SETUP_GUIDE.md
+[Setup instructions description]
+
+### [Other key docs]
+[Description]
+
+---
+
+## [Functional Area 1 - e.g., Backend API]
+
+### path/to/file.ext
+[Brief purpose]. Read this file to understand [concept 1], [concept 2], and [concept 3]. Use this file when [specific scenarios]. Includes `function_name()`, `another_function()`, and `ClassName`. [Dependencies or related files].
+
+### path/to/another/file.ext
+[Description]
+
+---
+
+## [Functional Area 2 - e.g., Frontend Components]
+
+### path/to/component.jsx
+[Description]
+
+---
+
+## [Functional Area 3 - e.g., Database Layer]
+
+### migrations/001_schema.sql
+[Description]
+
+---
+
+## Key Concepts
+
+**[Important Workflow or Pattern Name]**: 
+1. [Step 1 explanation]
+2. [Step 2 explanation]
+3. [Step 3 explanation]
+
+**[Another Important Concept]**: [Explanation of architecture, schema, or pattern]
+
+**[Technology-Specific Pattern]**: [How this is implemented in your project]
+
+---
+
+## Common Tasks
+
+**To [accomplish common task]**: [Step-by-step instructions with file references]
+
+**To [another common task]**: [Instructions]
+
+**To [troubleshoot common issue]**: [Debugging steps]
+
+---
+
+## File Organization
+
+```
+project-root/
+├── [directory structure showing main folders and key files]
+```
+
+---
+
+## [Optional: Architecture Diagram or Flow]
+
+```
+[Text-based diagram or flow if helpful]
+User → Frontend → API → Database
+       ↓
+    External Services
+```
+
+---
+
+**Last Updated**: [Date]
+**Project Version**: [Semantic version]
+**Status**: [Current state]
+
