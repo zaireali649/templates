@@ -1,0 +1,113 @@
+# Templates Repository
+
+> Collection of reusable templates for client documentation, llm.txt creation, and ML operations runbooks.
+
+## Project Overview
+
+**Tech Stack**: Markdown templates
+**Status**: Production-ready collection
+**Purpose**: Provides standardized templates for client communication, AI-assisted development workflows, and machine learning operations documentation
+
+---
+
+## Core Documentation
+
+### README.md
+Minimal project README at repository root. Read this file to understand the basic structure of the repository. Currently only contains the repository title.
+
+---
+
+## Client Documentation Templates
+
+### client-docs/MONTHLY_REPORT.template.md
+Comprehensive monthly development report template for retainer clients. Read this file to understand how to structure detailed monthly reports including hours breakdown, work completed, system health metrics, infrastructure costs, support tickets, security updates, upcoming work, recommendations, and client action items. Use this template when preparing monthly status reports for retainer-based development partnerships. Includes sections for time allocation tables, detailed time logs, work categorization (bug fixes, enhancements, new features, security), performance metrics, database statistics, cost tracking, and risk assessment. Essential for maintaining transparent client relationships and demonstrating value delivered. Designed for consultants and agencies on monthly retainer agreements tracking 20-40+ hours of work per month.
+
+### client-docs/RETAINER_AGREEMENT.template.md
+Complete retainer agreement template for development partnership contracts. Read this file to understand how to structure long-term development retainer agreements including scope of services, SLA definitions, hours management, payment terms, and deliverables. Use this template when establishing or formalizing ongoing development partnerships with clients. Includes sections for duration and auto-renewal terms, monthly investment structure, response time SLAs by priority level (Critical/High/Medium/Low), hours rollover policies, out-of-scope definitions, technology stack coverage, quarterly planning frameworks, value proposition comparisons, intellectual property terms, confidentiality clauses, and termination conditions. Covers both technical partnership aspects (proactive monitoring, strategic consultation) and business terms (billing, liability, insurance). Designed to replace project-by-project contracts with predictable recurring revenue relationships.
+
+### client-docs/RETAINER_VALUE_ANALYSIS.template.md
+Financial and strategic analysis template for positioning retainer agreements. Read this file to understand how to calculate, present, and justify retainer pricing from both consultant and client perspectives including revenue comparison scenarios, effective hourly rates, risk mitigation strategies, and ROI demonstrations. Use this template when preparing to pitch a retainer agreement to a client, analyzing whether a retainer makes financial sense, or positioning the value proposition. Includes detailed math breakdowns comparing retainer vs project-based revenue models, cost comparison tables (retainer vs part-time hire vs agency vs full-time), client value proposition frameworks, efficiency gains analysis, time breakdown calculations, effective rate scenarios (conservative/average/high usage), risk mitigation strategies for both parties, objection handling responses ("seems too expensive", "what if no work", "can I cancel"), success metrics definitions, and positioning conversation scripts. Particularly valuable for freelancers and agencies transitioning from project work to recurring revenue models. Shows how to frame a $3-8K/month retainer as cost savings for clients while providing revenue stability for consultants.
+
+---
+
+## llm.txt Creation Framework
+
+### llm-txt/LLM_TXT_STANDARDS.md
+Research-backed best practices and standards for creating optimized llm.txt files that maximize AI code agent performance. Read this file to understand why optimized llm.txt files outperform vector databases (95% vs 85% success rate), how to write effective file descriptions, proper structure and formatting rules, and quality optimization checklists. Use this file when creating new llm.txt files, optimizing existing ones, or teaching others about effective AI-assisted development workflows. Includes the file description template format (opening statement + primary concepts + use cases + specific functions + dependencies), structure guidelines for project overview and functional area organization, reasoning-friendly language patterns (verb-based descriptions starting with "Read this file to...", "Reference this for...", "Use when..."), anti-patterns to avoid (generic descriptions, missing context, listings without explanation), size guidelines (5,000-20,000 tokens optimal), maintenance triggers (when to update), and real-world examples of well-optimized vs poorly-optimized entries. Based on empirical research by Lance Martin showing clear descriptions enable better retrieval decisions. Critical reference for anyone implementing llm.txt in their projects. Explains why "RAG with full documents as retrieval units" outperforms context stuffing and standard documentation approaches.
+
+### llm-txt/CREATE_LLM_TXT.md
+Simple instruction guide for AI assistants to create llm.txt files using LLM_TXT_STANDARDS.md. Read this file to understand the quick commands and workflows for generating optimized llm.txt files automatically. Use this file when you want to quickly create or update an llm.txt file by providing it to an AI assistant along with the standards document. Includes three main usage patterns: full auto-generation (scan all files and create from scratch), update existing llm.txt (optimize current file), and add specific files (update with new additions). Provides copy-paste commands, expected output structure preview, tips for best results, and recommendations for file placement (shared templates in central location vs copied to each project). Designed to minimize friction in llm.txt adoption by reducing the task to a single command. References LLM_TXT_STANDARDS.md as the source of truth. Useful for teams implementing llm.txt workflows across multiple projects.
+
+### llm-txt/llm.txt.template
+Blank structural template for llm.txt files showing the recommended sections and format. Read this file to understand the skeleton structure of an optimized llm.txt file including placeholder sections for project overview, core documentation, functional areas, key concepts, common tasks, and file organization. Use this file as a starting point when creating a new llm.txt file manually or when you want to see the expected structure before auto-generation. Contains placeholder sections including project name and one-sentence description, tech stack and status fields, core documentation section, multiple functional area sections with file path and description placeholders, key concepts section for workflows and patterns, common tasks section for quick references, file organization tree structure, and optional architecture diagram section. Includes metadata fields for last updated date, project version, and status. Follows the format specified in LLM_TXT_STANDARDS.md but with all content as fillable placeholders. Alternative to fully automated generation for those who prefer manual control or want to understand the structure before generating.
+
+### llm-txt/QUICK_REFERENCE.md
+One-page cheatsheet of common llm.txt commands and workflows. Read this file for quick access to the most common llm.txt-related commands without reading the full standards document. Use this file when you need a fast reminder of syntax, already understand the concepts, or want a printable reference card. Includes three primary commands (create new, update existing, add new files), template files summary table, recommended setup location advice (keep in ~/templates/llm-txt/ for cross-project access), maintenance commands (after adding files, after refactoring, quality checks), and minimal explanation focused on practical usage. Designed for experienced users who have already read LLM_TXT_STANDARDS.md and just need command syntax reminders. Cross-references the full standards document for detailed explanations.
+
+### llm-txt/prompt.txt
+Single-line command to create llms.txt for this templates repository. Read this file to see the exact prompt used to generate the llms.txt file you're currently reading. Contains reference to LLM_TXT_STANDARDS.md and instruction to create llms.txt. Meta-documentation showing the self-referential workflow used to document this repository.
+
+---
+
+## ML Operations Runbooks
+
+### oncall-runbooks/ml_oncall_runbooks_master.md
+Comprehensive ML operations runbook with detailed procedures for ML system incidents. Read this file to understand complete step-by-step procedures for handling ML production incidents including model deployment, retraining, monitoring alerts, data pipeline failures, infrastructure scaling, data quality issues, access problems, and incident communication. Use this file when you're on-call for ML systems and need detailed troubleshooting procedures, rollback instructions, or escalation paths. Includes eight major runbook sections: Model Deployment (new model promotion with validation and rollback), Model Retraining and Update (evaluating and promoting retrained versions), Model Monitoring and Alerting (investigating accuracy drops and data drift), Data Pipeline Failure (restoring training/inference data flows), ML Infrastructure Scaling (handling high inference load and latency), Data Quality & Availability (corrupted or missing input features), Access & Permissions (resolving access to model registries and monitoring), and Incident Communication (status updates and stakeholder coordination). Each runbook follows scenario-objective-steps format with specific examples using Iris classifier as reference model. Designed for ML engineers, MLOps teams, and platform engineers supporting production ML systems. More detailed than the short version with full diagnostic procedures.
+
+### oncall-runbooks/ml_oncall_runbooks_master_short.md
+Condensed ML operations runbook overview with scenario summaries. Read this file to understand high-level scenarios and objectives for common ML production incidents without detailed step-by-step procedures. Use this file when you need a quick reference to identify which runbook category applies to your incident, or when training new team members on the types of ML incidents to expect. Contains the same eight runbook categories as the master document (Model Deployment, Model Retraining and Update, Model Monitoring and Alerting, Data Pipeline Failure, ML Infrastructure Scaling, Data Quality & Availability, Access & Permissions, Incident Communication) but with only scenario descriptions and objectives, no detailed procedures. Each section includes a concrete example using Iris classifier models (iris_classifier_v1, v2, v3) as reference. Useful as a table of contents or quick triage guide to determine which detailed runbook section to reference. Approximately 48 lines vs 272 lines in the master version.
+
+---
+
+## Key Concepts
+
+**llm.txt Optimization Framework**: The LLM_TXT_STANDARDS.md defines a research-backed approach where "RAG with full documents as retrieval units" enables LLMs to reason about which files to read based on clear descriptions. Optimized descriptions must explain WHEN to read a file (use cases), WHAT you'll learn (specific concepts with function/class names), and WHY it matters (dependencies and relationships). This achieves 95% success rate vs 85% for vector databases or 70% for context stuffing.
+
+**Client Retainer Structure**: The three client-docs templates work together to establish and maintain retainer relationships. RETAINER_AGREEMENT.template.md defines the legal and operational framework (hours, SLA, scope). RETAINER_VALUE_ANALYSIS.template.md provides the financial justification and positioning strategy to win the client. MONTHLY_REPORT.template.md demonstrates ongoing value and maintains transparency. Together they support transitioning from unpredictable project work to recurring revenue with 20-40 hour monthly engagements.
+
+**ML Runbook Hierarchy**: The oncall-runbooks follow a two-tier documentation pattern. The short version (ml_oncall_runbooks_master_short.md) serves as triage and orientation, helping oncall engineers quickly identify incident category. The master version (ml_oncall_runbooks_master.md) provides detailed procedures for resolution. Both use concrete examples (Iris classifier v1/v2/v3) to make abstract ML concepts tangible.
+
+**Template Repository Philosophy**: All templates follow a fill-in-the-blank approach with [PLACEHOLDER] syntax making it obvious where customization is needed. They balance comprehensiveness (covering edge cases and details) with usability (clear sections, searchable structure). Templates are designed for direct use, not as examples requiring significant adaptation.
+
+---
+
+## Common Tasks
+
+**To create an llm.txt file for a new project**: Reference the LLM_TXT_STANDARDS.md file and use the command pattern shown in CREATE_LLM_TXT.md. Either auto-generate by having an AI scan all files and create descriptions following the standards, or manually fill in llm.txt.template with project-specific details. Optimize descriptions to explain when/what/why for each file.
+
+**To prepare a monthly client report**: Copy MONTHLY_REPORT.template.md to a new file with naming pattern like "2025-10-ClientName-Monthly-Report.md". Fill in all bracketed placeholders starting with executive summary (hours used/remaining, key accomplishments), then detailed time logs, work completed by category, system metrics if applicable, costs, and upcoming work. Deliver by the agreed date each month (typically 1st-5th of following month).
+
+**To pitch a retainer agreement**: Start with RETAINER_VALUE_ANALYSIS.template.md to calculate the financial model and prepare your positioning. Use the "What You Say to [Client Contact]" script to frame the proposal. Present RETAINER_AGREEMENT.template.md as the formal contract after verbal agreement. Emphasize predictability for client (fixed costs) and immediate value (first project included saves money vs standalone pricing).
+
+**To handle an ML production incident**: First reference oncall-runbooks/ml_oncall_runbooks_master_short.md to identify which of the 8 runbook categories matches your incident (deployment, monitoring, data pipeline, scaling, data quality, access, or communication). Then open the corresponding section in ml_oncall_runbooks_master.md for detailed diagnostic steps, commands, and rollback procedures.
+
+**To maintain llm.txt files**: Update whenever you add new files, refactor architecture, or add major features. Use the optimization checklist in LLM_TXT_STANDARDS.md to audit quality. Test by asking an AI to solve a task using only your llm.txt and observe if it retrieves the right files. Common maintenance triggers include adding 5+ new files, changing file organization, or updating function signatures referenced in descriptions.
+
+---
+
+## File Organization
+
+```
+templates/
+├── client-docs/              # Client relationship templates
+│   ├── MONTHLY_REPORT.template.md
+│   ├── RETAINER_AGREEMENT.template.md
+│   └── RETAINER_VALUE_ANALYSIS.template.md
+├── llm-txt/                  # llm.txt creation framework
+│   ├── LLM_TXT_STANDARDS.md
+│   ├── CREATE_LLM_TXT.md
+│   ├── llm.txt.template
+│   ├── prompt.txt
+│   └── QUICK_REFERENCE.md
+├── oncall-runbooks/          # ML operations runbooks
+│   ├── ml_oncall_runbooks_master.md
+│   └── ml_oncall_runbooks_master_short.md
+└── README.md
+```
+
+---
+
+**Last Updated**: October 29, 2025
+**Repository Status**: Active template collection
+**Usage**: Reference templates directly or copy to project-specific locations
+
