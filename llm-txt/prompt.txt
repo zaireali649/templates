@@ -1,1 +1,1 @@
-@C:\Users\Ziggy\Dropbox\GitHub\templates\llm-txt\LLM_TXT_STANDARDS.md - Create llms.txt
+@C:\Users\Ziggy\Dropbox\GitHub\templates\llms-txt\LLM_TXT_STANDARDS.md - Create llms.txt

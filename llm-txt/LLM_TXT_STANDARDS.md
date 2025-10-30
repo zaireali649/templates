@@ -1,19 +1,19 @@
-# llm.txt Best Practices & Standards
+# llms.txt Best Practices & Standards
 
-> **Research-backed guidelines for creating effective `llm.txt` files that maximize AI code agent performance.**
+> **Research-backed guidelines for creating effective `llms.txt` files that maximize AI code agent performance.**
 
-Based on research by [Lance Martin](https://rlancemartin.github.io/2025/04/03/vibe-code/), optimized `llm.txt` files outperform vector databases, context stuffing, and standard documentation approaches when working with AI code agents like Claude Code and Cursor.
+Based on research by [Lance Martin](https://rlancemartin.github.io/2025/04/03/vibe-code/), optimized `llms.txt` files outperform vector databases, context stuffing, and standard documentation approaches when working with AI code agents like Claude Code and Cursor.
 
 ---
 
-## Why llm.txt Works
+## Why llms.txt Works
 
-**Key Finding**: `llm.txt` is "RAG with full documents as retrieval units" - the LLM reasons directly about file descriptions and decides which documents to retrieve.
+**Key Finding**: `llms.txt` is "RAG with full documents as retrieval units" - the LLM reasons directly about file descriptions and decides which documents to retrieve.
 
 **Performance Hierarchy** (from research):
-1. ✅ **Optimized llm.txt** - 95% success rate
+1. ✅ **Optimized llms.txt** - 95% success rate
 2. ⚠️ Vector Database - 85% success rate  
-3. ⚠️ Standard llm.txt - 80% success rate
+3. ⚠️ Standard llms.txt - 80% success rate
 4. ❌ Context Stuffing - 70% success rate
 
 **Why it wins**: Clear, consistent descriptions allow LLMs to make intelligent retrieval decisions rather than relying on semantic search or processing massive context windows.
@@ -24,7 +24,7 @@ Based on research by [Lance Martin](https://rlancemartin.github.io/2025/04/03/vi
 
 ### 1. **Optimized Descriptions Are Critical**
 
-The difference between standard and optimized `llm.txt` is description quality:
+The difference between standard and optimized `llms.txt` is description quality:
 
 - ❌ **Bad**: `file.py - Contains utility functions`
 - ✅ **Good**: `file.py - Read this file to understand how user authentication is handled, including password hashing with bcrypt, session token generation, and JWT validation. Essential for implementing login/logout functionality.`
@@ -49,7 +49,7 @@ Write descriptions that help LLMs make decisions:
 
 ## File Description Template
 
-Use this template for each file in your `llm.txt`:
+Use this template for each file in your `llms.txt`:
 
 ```markdown
 ### path/to/file.ext
@@ -154,7 +154,7 @@ Provide quick reference for frequent operations:
 
 ## Optimization Checklist
 
-Use this checklist to audit your `llm.txt`:
+Use this checklist to audit your `llms.txt`:
 
 ### Content Quality
 - [ ] Every file has a description
@@ -243,7 +243,7 @@ Post management endpoints (GET, POST, PUT, DELETE /posts). Read this file for co
 
 ### When to Update
 
-Update your `llm.txt` whenever you:
+Update your `llms.txt` whenever you:
 - Add new files or modules
 - Change architecture or workflows
 - Add major features
@@ -268,7 +268,7 @@ Update your `llm.txt` whenever you:
 - **Too large** (>20k tokens): Retrieval becomes less efficient, dilutes important information
 
 **If too large**:
-- Split into multiple `llm.txt` files by domain (frontend.llm.txt, backend.llm.txt)
+- Split into multiple `llms.txt` files by domain (frontend.llms.txt, backend.llms.txt)
 - Focus on high-level descriptions, link to detailed docs
 - Remove redundant explanations
 
@@ -303,7 +303,7 @@ This guide is based on empirical research comparing code agent performance acros
 **Source**: [Vibe Code Benchmark by Lance Martin](https://rlancemartin.github.io/2025/04/03/vibe-code/)
 
 **Key Findings**:
-- Optimized `llm.txt` achieved 95% success rate on coding challenges
+- Optimized `llms.txt` achieved 95% success rate on coding challenges
 - Most errors with context stuffing were hallucinated APIs (6/11 errors)
 - Clear descriptions enable better retrieval decisions
 - LLMs can "reason" about which documents to retrieve when given good descriptions
@@ -312,7 +312,7 @@ This guide is based on empirical research comparing code agent performance acros
 
 ## Quick Start
 
-**To create an optimized `llm.txt` for your project**:
+**To create an optimized `llms.txt` for your project**:
 
 1. **Inventory**: List all source files, docs, configs
 2. **Prioritize**: Identify the 20% of files that explain 80% of functionality
@@ -320,14 +320,14 @@ This guide is based on empirical research comparing code agent performance acros
 4. **Group**: Organize by functional area
 5. **Explain**: Add Key Concepts and Common Tasks sections
 6. **Review**: Run through the Optimization Checklist
-7. **Test**: Ask an AI to solve a task using only your `llm.txt`
+7. **Test**: Ask an AI to solve a task using only your `llms.txt`
 8. **Iterate**: Refine descriptions based on AI performance
 
 ---
 
 ## Tools
 
-**To optimize existing `llm.txt`**:
+**To optimize existing `llms.txt`**:
 - Use an LLM to read each file and generate descriptions
 - Ask: "Read [filename] and explain: what it does, when to use it, key functions/classes, dependencies"
 - Review and refine for consistency
@@ -335,7 +335,7 @@ This guide is based on empirical research comparing code agent performance acros
 
 **Example prompt for optimization**:
 ```
-Read the file at [path/to/file]. Generate an optimized llm.txt description following this format:
+Read the file at [path/to/file]. Generate an optimized llms.txt description following this format:
 
 "[Brief purpose statement]. Read this file to understand [3-5 specific concepts/features]. [When to use/scenarios]. [Key functions/classes by name]. [Dependencies and related files]."
 
@@ -344,5 +344,5 @@ Make it specific, actionable, and focused on helping an AI code agent decide whe
 
 ---
 
-**Summary**: Invest time in clear, specific, well-structured descriptions. The quality of your `llm.txt` directly impacts AI code agent performance.
+**Summary**: Invest time in clear, specific, well-structured descriptions. The quality of your `llms.txt` directly impacts AI code agent performance.
 
