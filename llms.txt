@@ -1,6 +1,6 @@
 # Templates Repository
 
-> Collection of reusable templates for client documentation, llm.txt creation, and ML operations runbooks.
+> Collection of reusable templates for client documentation, llms.txt creation, and ML operations runbooks.
 
 ## Project Overview
 
@@ -30,21 +30,21 @@ Financial and strategic analysis template for positioning retainer agreements. R
 
 ---
 
-## llm.txt Creation Framework
+## llms.txt Creation Framework
 
-### llm-txt/LLM_TXT_STANDARDS.md
-Research-backed best practices and standards for creating optimized llm.txt files that maximize AI code agent performance. Read this file to understand why optimized llm.txt files outperform vector databases (95% vs 85% success rate), how to write effective file descriptions, proper structure and formatting rules, and quality optimization checklists. Use this file when creating new llm.txt files, optimizing existing ones, or teaching others about effective AI-assisted development workflows. Includes the file description template format (opening statement + primary concepts + use cases + specific functions + dependencies), structure guidelines for project overview and functional area organization, reasoning-friendly language patterns (verb-based descriptions starting with "Read this file to...", "Reference this for...", "Use when..."), anti-patterns to avoid (generic descriptions, missing context, listings without explanation), size guidelines (5,000-20,000 tokens optimal), maintenance triggers (when to update), and real-world examples of well-optimized vs poorly-optimized entries. Based on empirical research by Lance Martin showing clear descriptions enable better retrieval decisions. Critical reference for anyone implementing llm.txt in their projects. Explains why "RAG with full documents as retrieval units" outperforms context stuffing and standard documentation approaches.
+### llms-txt/LLM_TXT_STANDARDS.md
+Research-backed best practices and standards for creating optimized llms.txt files that maximize AI code agent performance. Read this file to understand why optimized llms.txt files outperform vector databases (95% vs 85% success rate), how to write effective file descriptions, proper structure and formatting rules, and quality optimization checklists. Use this file when creating new llms.txt files, optimizing existing ones, or teaching others about effective AI-assisted development workflows. Includes the file description template format (opening statement + primary concepts + use cases + specific functions + dependencies), structure guidelines for project overview and functional area organization, reasoning-friendly language patterns (verb-based descriptions starting with "Read this file to...", "Reference this for...", "Use when..."), anti-patterns to avoid (generic descriptions, missing context, listings without explanation), size guidelines (5,000-20,000 tokens optimal), maintenance triggers (when to update), and real-world examples of well-optimized vs poorly-optimized entries. Based on empirical research by Lance Martin showing clear descriptions enable better retrieval decisions. Critical reference for anyone implementing llms.txt in their projects. Explains why "RAG with full documents as retrieval units" outperforms context stuffing and standard documentation approaches.
 
-### llm-txt/CREATE_LLM_TXT.md
-Simple instruction guide for AI assistants to create llm.txt files using LLM_TXT_STANDARDS.md. Read this file to understand the quick commands and workflows for generating optimized llm.txt files automatically. Use this file when you want to quickly create or update an llm.txt file by providing it to an AI assistant along with the standards document. Includes three main usage patterns: full auto-generation (scan all files and create from scratch), update existing llm.txt (optimize current file), and add specific files (update with new additions). Provides copy-paste commands, expected output structure preview, tips for best results, and recommendations for file placement (shared templates in central location vs copied to each project). Designed to minimize friction in llm.txt adoption by reducing the task to a single command. References LLM_TXT_STANDARDS.md as the source of truth. Useful for teams implementing llm.txt workflows across multiple projects.
+### llms-txt/CREATE_LLM_TXT.md
+Simple instruction guide for AI assistants to create llms.txt files using LLM_TXT_STANDARDS.md. Read this file to understand the quick commands and workflows for generating optimized llms.txt files automatically. Use this file when you want to quickly create or update an llms.txt file by providing it to an AI assistant along with the standards document. Includes three main usage patterns: full auto-generation (scan all files and create from scratch), update existing llms.txt (optimize current file), and add specific files (update with new additions). Provides copy-paste commands, expected output structure preview, tips for best results, and recommendations for file placement (shared templates in central location vs copied to each project). Designed to minimize friction in llms.txt adoption by reducing the task to a single command. References LLM_TXT_STANDARDS.md as the source of truth. Useful for teams implementing llms.txt workflows across multiple projects.
 
-### llm-txt/llm.txt.template
-Blank structural template for llm.txt files showing the recommended sections and format. Read this file to understand the skeleton structure of an optimized llm.txt file including placeholder sections for project overview, core documentation, functional areas, key concepts, common tasks, and file organization. Use this file as a starting point when creating a new llm.txt file manually or when you want to see the expected structure before auto-generation. Contains placeholder sections including project name and one-sentence description, tech stack and status fields, core documentation section, multiple functional area sections with file path and description placeholders, key concepts section for workflows and patterns, common tasks section for quick references, file organization tree structure, and optional architecture diagram section. Includes metadata fields for last updated date, project version, and status. Follows the format specified in LLM_TXT_STANDARDS.md but with all content as fillable placeholders. Alternative to fully automated generation for those who prefer manual control or want to understand the structure before generating.
+### llms-txt/llms.txt.template
+Blank structural template for llms.txt files showing the recommended sections and format. Read this file to understand the skeleton structure of an optimized llms.txt file including placeholder sections for project overview, core documentation, functional areas, key concepts, common tasks, and file organization. Use this file as a starting point when creating a new llms.txt file manually or when you want to see the expected structure before auto-generation. Contains placeholder sections including project name and one-sentence description, tech stack and status fields, core documentation section, multiple functional area sections with file path and description placeholders, key concepts section for workflows and patterns, common tasks section for quick references, file organization tree structure, and optional architecture diagram section. Includes metadata fields for last updated date, project version, and status. Follows the format specified in LLM_TXT_STANDARDS.md but with all content as fillable placeholders. Alternative to fully automated generation for those who prefer manual control or want to understand the structure before generating.
 
-### llm-txt/QUICK_REFERENCE.md
-One-page cheatsheet of common llm.txt commands and workflows. Read this file for quick access to the most common llm.txt-related commands without reading the full standards document. Use this file when you need a fast reminder of syntax, already understand the concepts, or want a printable reference card. Includes three primary commands (create new, update existing, add new files), template files summary table, recommended setup location advice (keep in ~/templates/llm-txt/ for cross-project access), maintenance commands (after adding files, after refactoring, quality checks), and minimal explanation focused on practical usage. Designed for experienced users who have already read LLM_TXT_STANDARDS.md and just need command syntax reminders. Cross-references the full standards document for detailed explanations.
+### llms-txt/QUICK_REFERENCE.md
+One-page cheatsheet of common llms.txt commands and workflows. Read this file for quick access to the most common llms.txt-related commands without reading the full standards document. Use this file when you need a fast reminder of syntax, already understand the concepts, or want a printable reference card. Includes three primary commands (create new, update existing, add new files), template files summary table, recommended setup location advice (keep in ~/templates/llms-txt/ for cross-project access), maintenance commands (after adding files, after refactoring, quality checks), and minimal explanation focused on practical usage. Designed for experienced users who have already read LLM_TXT_STANDARDS.md and just need command syntax reminders. Cross-references the full standards document for detailed explanations.
 
-### llm-txt/prompt.txt
+### llms-txt/prompt.txt
 Single-line command to create llms.txt for this templates repository. Read this file to see the exact prompt used to generate the llms.txt file you're currently reading. Contains reference to LLM_TXT_STANDARDS.md and instruction to create llms.txt. Meta-documentation showing the self-referential workflow used to document this repository.
 
 ---
@@ -61,7 +61,7 @@ Condensed ML operations runbook overview with scenario summaries. Read this file
 
 ## Key Concepts
 
-**llm.txt Optimization Framework**: The LLM_TXT_STANDARDS.md defines a research-backed approach where "RAG with full documents as retrieval units" enables LLMs to reason about which files to read based on clear descriptions. Optimized descriptions must explain WHEN to read a file (use cases), WHAT you'll learn (specific concepts with function/class names), and WHY it matters (dependencies and relationships). This achieves 95% success rate vs 85% for vector databases or 70% for context stuffing.
+**llms.txt Optimization Framework**: The LLM_TXT_STANDARDS.md defines a research-backed approach where "RAG with full documents as retrieval units" enables LLMs to reason about which files to read based on clear descriptions. Optimized descriptions must explain WHEN to read a file (use cases), WHAT you'll learn (specific concepts with function/class names), and WHY it matters (dependencies and relationships). This achieves 95% success rate vs 85% for vector databases or 70% for context stuffing.
 
 **Client Retainer Structure**: The three client-docs templates work together to establish and maintain retainer relationships. RETAINER_AGREEMENT.template.md defines the legal and operational framework (hours, SLA, scope). RETAINER_VALUE_ANALYSIS.template.md provides the financial justification and positioning strategy to win the client. MONTHLY_REPORT.template.md demonstrates ongoing value and maintains transparency. Together they support transitioning from unpredictable project work to recurring revenue with 20-40 hour monthly engagements.
 
@@ -73,7 +73,7 @@ Condensed ML operations runbook overview with scenario summaries. Read this file
 
 ## Common Tasks
 
-**To create an llm.txt file for a new project**: Reference the LLM_TXT_STANDARDS.md file and use the command pattern shown in CREATE_LLM_TXT.md. Either auto-generate by having an AI scan all files and create descriptions following the standards, or manually fill in llm.txt.template with project-specific details. Optimize descriptions to explain when/what/why for each file.
+**To create an llms.txt file for a new project**: Reference the LLM_TXT_STANDARDS.md file and use the command pattern shown in CREATE_LLM_TXT.md. Either auto-generate by having an AI scan all files and create descriptions following the standards, or manually fill in llms.txt.template with project-specific details. Optimize descriptions to explain when/what/why for each file.
 
 **To prepare a monthly client report**: Copy MONTHLY_REPORT.template.md to a new file with naming pattern like "2025-10-ClientName-Monthly-Report.md". Fill in all bracketed placeholders starting with executive summary (hours used/remaining, key accomplishments), then detailed time logs, work completed by category, system metrics if applicable, costs, and upcoming work. Deliver by the agreed date each month (typically 1st-5th of following month).
 
@@ -81,7 +81,7 @@ Condensed ML operations runbook overview with scenario summaries. Read this file
 
 **To handle an ML production incident**: First reference oncall-runbooks/ml_oncall_runbooks_master_short.md to identify which of the 8 runbook categories matches your incident (deployment, monitoring, data pipeline, scaling, data quality, access, or communication). Then open the corresponding section in ml_oncall_runbooks_master.md for detailed diagnostic steps, commands, and rollback procedures.
 
-**To maintain llm.txt files**: Update whenever you add new files, refactor architecture, or add major features. Use the optimization checklist in LLM_TXT_STANDARDS.md to audit quality. Test by asking an AI to solve a task using only your llm.txt and observe if it retrieves the right files. Common maintenance triggers include adding 5+ new files, changing file organization, or updating function signatures referenced in descriptions.
+**To maintain llms.txt files**: Update whenever you add new files, refactor architecture, or add major features. Use the optimization checklist in LLM_TXT_STANDARDS.md to audit quality. Test by asking an AI to solve a task using only your llms.txt and observe if it retrieves the right files. Common maintenance triggers include adding 5+ new files, changing file organization, or updating function signatures referenced in descriptions.
 
 ---
 
@@ -93,10 +93,10 @@ templates/
 │   ├── MONTHLY_REPORT.template.md
 │   ├── RETAINER_AGREEMENT.template.md
 │   └── RETAINER_VALUE_ANALYSIS.template.md
-├── llm-txt/                  # llm.txt creation framework
+├── llms-txt/                  # llms.txt creation framework
 │   ├── LLM_TXT_STANDARDS.md
 │   ├── CREATE_LLM_TXT.md
-│   ├── llm.txt.template
+│   ├── llms.txt.template
 │   ├── prompt.txt
 │   └── QUICK_REFERENCE.md
 ├── oncall-runbooks/          # ML operations runbooks
@@ -110,4 +110,5 @@ templates/
 **Last Updated**: October 29, 2025
 **Repository Status**: Active template collection
 **Usage**: Reference templates directly or copy to project-specific locations
+
 

@@ -1,20 +1,20 @@
-# llm.txt Quick Reference Card
+# llms.txt Quick Reference Card
 
 ## One-Line Commands
 
-### Create New llm.txt
+### Create New llms.txt
 ```
-@LLM_TXT_STANDARDS.md - Create an optimized llm.txt for this project
+@LLM_TXT_STANDARDS.md - Create an optimized llms.txt for this project
 ```
 
-### Update Existing llm.txt
+### Update Existing llms.txt
 ```
-@LLM_TXT_STANDARDS.md - Optimize my llm.txt following the standards
+@LLM_TXT_STANDARDS.md - Optimize my llms.txt following the standards
 ```
 
 ### Add New Files
 ```
-@LLM_TXT_STANDARDS.md - Add these files to llm.txt: [file paths]
+@LLM_TXT_STANDARDS.md - Add these files to llms.txt: [file paths]
 ```
 
 ---
@@ -25,18 +25,18 @@
 |------|---------|
 | `LLM_TXT_STANDARDS.md` | The rules and best practices |
 | `CREATE_LLM_TXT.md` | Detailed instructions (optional) |
-| `llm.txt.template` | Blank template to fill in |
+| `llms.txt.template` | Blank template to fill in |
 | `QUICK_REFERENCE.md` | This file - commands cheatsheet |
 
 ---
 
 ## Recommended Setup
 
-**Keep these in:** `~/templates/llm-txt/` or `C:\templates\llm-txt\`
+**Keep these in:** `~/templates/llms-txt/` or `C:\templates\llms-txt\`
 
 Then in any project, just:
 ```
-@C:\templates\llm-txt\LLM_TXT_STANDARDS.md - Create llm.txt
+@C:\templates\llms-txt\LLM_TXT_STANDARDS.md - Create llms.txt
 ```
 
 ---
@@ -45,17 +45,17 @@ Then in any project, just:
 
 ### After Adding Files
 ```
-@LLM_TXT_STANDARDS.md - Update llm.txt with new files
+@LLM_TXT_STANDARDS.md - Update llms.txt with new files
 ```
 
 ### After Refactoring
 ```
-@LLM_TXT_STANDARDS.md - Update function names in llm.txt descriptions
+@LLM_TXT_STANDARDS.md - Update function names in llms.txt descriptions
 ```
 
 ### Quality Check
 ```
-@LLM_TXT_STANDARDS.md - Review my llm.txt and suggest improvements
+@LLM_TXT_STANDARDS.md - Review my llms.txt and suggest improvements
 ```
 
 ---

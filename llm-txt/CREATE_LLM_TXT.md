@@ -1,8 +1,8 @@
-# Create llm.txt for This Project
+# Create llms.txt for This Project
 
 **Instruction for AI Assistant:**
 
-> Create an optimized `llm.txt` file for this project following the standards in `@LLM_TXT_STANDARDS.md`. Analyze all files in this repository and generate comprehensive descriptions for each, organized by functional area.
+> Create an optimized `llms.txt` file for this project following the standards in `@LLM_TXT_STANDARDS.md`. Analyze all files in this repository and generate comprehensive descriptions for each, organized by functional area.
 
 That's it! Just say that to any AI code agent.
 
@@ -16,9 +16,9 @@ The AI will:
 3. ✅ Write optimized descriptions following the research-backed format
 4. ✅ Include specific function/class names
 5. ✅ Add Key Concepts and Common Tasks sections
-6. ✅ Create a production-ready `llm.txt` file
+6. ✅ Create a production-ready `llms.txt` file
 
-**Alternative:** If you prefer starting with a template, copy `llm.txt.template` to `llm.txt` and ask the AI to fill it in.
+**Alternative:** If you prefer starting with a template, copy `llms.txt.template` to `llms.txt` and ask the AI to fill it in.
 
 ---
 
@@ -26,17 +26,17 @@ The AI will:
 
 ### Option 1: Full Auto-Generation
 ```
-@LLM_TXT_STANDARDS.md @CREATE_LLM_TXT.md - Create an optimized llm.txt for this project
+@LLM_TXT_STANDARDS.md @CREATE_LLM_TXT.md - Create an optimized llms.txt for this project
 ```
 
-### Option 2: Update Existing llm.txt
+### Option 2: Update Existing llms.txt
 ```
-@LLM_TXT_STANDARDS.md @llm.txt - Optimize this llm.txt file following the standards
+@LLM_TXT_STANDARDS.md @llms.txt - Optimize this llms.txt file following the standards
 ```
 
 ### Option 3: Add Specific Files
 ```
-@LLM_TXT_STANDARDS.md - Add descriptions for these new files to llm.txt: [list files]
+@LLM_TXT_STANDARDS.md - Add descriptions for these new files to llms.txt: [list files]
 ```
 
 ---
@@ -84,7 +84,7 @@ A file structure like this:
 
 **Be specific if needed:**
 ```
-@LLM_TXT_STANDARDS.md - Create llm.txt focusing on:
+@LLM_TXT_STANDARDS.md - Create llms.txt focusing on:
 - Backend API endpoints
 - Database schema
 - Authentication flow
@@ -92,12 +92,12 @@ A file structure like this:
 
 **Request updates:**
 ```
-@LLM_TXT_STANDARDS.md - Update llm.txt with the 5 new files I just added
+@LLM_TXT_STANDARDS.md - Update llms.txt with the 5 new files I just added
 ```
 
 **Get explanations:**
 ```
-@LLM_TXT_STANDARDS.md - Explain why my current llm.txt isn't optimal
+@LLM_TXT_STANDARDS.md - Explain why my current llms.txt isn't optimal
 ```
 
 ---
@@ -105,21 +105,21 @@ A file structure like this:
 ## File Placement
 
 **Option A: Keep as Shared Templates (Recommended)**
-1. Store these files in a central location: `~/templates/llm-txt/`
+1. Store these files in a central location: `~/templates/llms-txt/`
    - `LLM_TXT_STANDARDS.md`
    - `CREATE_LLM_TXT.md`
-   - `llm.txt.template`
+   - `llms.txt.template`
 2. Reference from any project without copying
 3. Just use `@` to reference the template location
 
 **Option B: Copy to Each Project**
 1. Copy `LLM_TXT_STANDARDS.md` to project root
 2. Copy `CREATE_LLM_TXT.md` to project root
-3. Optionally copy `llm.txt.template` as starting point
+3. Optionally copy `llms.txt.template` as starting point
 
 **Pro tip:** Keep templates in a shared folder you can reference across all projects via absolute path or symlink!
 
 ---
 
-**That's it!** No complex prompts to remember. Just tag the files and say "create llm.txt" or "do this".
+**That's it!** No complex prompts to remember. Just tag the files and say "create llms.txt" or "do this".
 
