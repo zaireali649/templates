@@ -87,6 +87,16 @@ Core documentation files that provide persistent context for AI:
 
 ## Additional Resources
 
+### Meta / Continuous Improvement (`meta/`)
+
+Workflows for evolving and improving this templates repository:
+- `system-evolution.md` - How to improve templates over time
+- `template-retrospective.md` - Post-project review process
+- `new-project-bootstrap.md` - Canonical setup workflow
+- `prompt-evolution.md` - Prompt library governance
+
+**Note**: The `meta/` folder is for maintaining *this* templates repository, not for copying into downstream projects.
+
 ### Client Documentation (`client-docs/`)
 
 Templates for consulting and agency work:

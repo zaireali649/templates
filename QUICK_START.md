@@ -6,6 +6,10 @@ How to use these templates in your projects.
 
 ## For a New Project
 
+**Want a detailed walkthrough?** See `meta/new-project-bootstrap.md` for complete step-by-step instructions.
+
+**Quick start** (simplified version):
+
 ### 1. Copy Cursor Rules
 ```bash
 cp cursor/rules.md /path/to/your-project/.cursor/rules.md

@@ -78,6 +78,22 @@ Behavioral guidelines for AI coding assistants in projects. Read this file to un
 
 ---
 
+## Meta / Continuous Improvement
+
+### meta/system-evolution.md
+How this templates repository evolves over time based on real-world usage. Read this file to understand how to identify gaps in templates, update existing templates safely, version the repository, review and improve Cursor rules, capture lessons from real projects, and maintain the template system through regular cadences. Use this file when maintaining or improving this templates repository, planning repository updates, evaluating whether templates need changes, establishing versioning and changelog practices, or defining quality standards for template updates. Includes sections for inputs that signal gaps (project retros, user friction, repeated edits), symptom-to-change mapping (linking friction to template improvements), backwards compatibility principles (safe update practices), template versioning approach (date-based with semantic indicators), Cursor rules evaluation criteria (effectiveness, clarity, completeness), lesson capture workflows (what/where/how to document), maintenance cadence (monthly/quarterly/annual checklists with triggers), version control strategy (git tags and changelog), quality assurance checklist (content, technical, discoverability), and anti-patterns to avoid. Designed for template maintainers and contributors ensuring this repository remains a living system that improves with each project.
+
+### meta/template-retrospective.md
+Repeatable retrospective process for improving templates after finishing projects. Read this file to understand when to run retrospectives (end of project, quarterly, post-incident), what questions to ask to identify prompt failures and template gaps, how to analyze root causes and map them to improvement types (update prompt vs template vs rule), and how to create structured improvement queues with validation plans. Use this file when completing projects and want to capture lessons learned, experiencing friction with templates and need structured way to document improvements, running quarterly reviews of template effectiveness, or converting project experiences into template enhancements. Includes sections for retrospective setup (when/who/timing/materials), four-part question framework (what worked, what didn't, missing context, template customizations), decision matrix (root cause to improvement type mapping), output artifacts (improvements queue, validation plan, committed changes), retrospective format variations (quick 30min, standard 1hr, deep 2hr), templates for common scenarios (post-MVP, post-feature, post-incident, quarterly), and follow-up action timelines. Provides concrete symptom catalogs for prompt failures and template gaps. Essential for continuous improvement of this template repository.
+
+### meta/new-project-bootstrap.md
+Canonical step-by-step workflow for starting new projects using these templates. Read this file to understand the complete bootstrapping process including copying Cursor rules and project templates, filling placeholders in correct order, running first prompts to orient AI, and completing pre-coding tasks. Use this file when starting any new project, onboarding team members to template workflow, ensuring consistent project setup across organization, or need detailed checklist to avoid missing steps. Includes six phases: copy core files (Cursor rules and project templates with commands), fill core placeholders (llms.txt, memory.md, architecture.md in priority order with time estimates), quick-fill optional templates (decisions.md, roadmap.md, tasks.md), configure standards (coding-standards.md, testing.md, api-contracts.md, deployment.md as patterns emerge), first prompts to run (orient AI, validate setup, plan first feature with exact prompt examples), and first tasks checklist (setup, documentation, first code, validation before coding begins). Includes workflow variations for greenfield projects, existing codebases, team projects, and rapid prototypes with different time investments. Provides troubleshooting guidance and success criteria. Time investment ranges from 15 minutes (minimal) to 2 hours (full setup). Reference this as the authoritative bootstrapping guide.
+
+### meta/prompt-evolution.md
+How the prompt library grows and improves over time with quality standards and governance. Read this file to understand prompt quality criteria (specific, context-grounding, format-defining, iterative, failure-aware), naming conventions for general-prompts/ and prompts/ folders, when to create new prompts vs update existing ones, how to retire outdated prompts with deprecation path, and how to test prompts in real projects before adding to library. Use this file when evaluating prompt effectiveness, deciding whether to create new prompt or enhance existing one, maintaining prompt library quality, deprecating or removing prompts, or establishing prompt governance standards. Includes quality checklist (clear objective, explicit context, structured output, examples, edge cases, tested, distinct, concise), anti-patterns to avoid (mega-prompts, vague instructions, missing examples, no grounding, untested), naming conventions for both prompt folders, new prompt template with required sections, update process for minor vs major changes, retirement/deprecation workflow (mark deprecated, provide alternative, grace period, removal), testing protocol (solo validation, revision, second validation, acceptance criteria), lightweight versioning approach (last updated dates, changelog entries), prompt categories (frameworks, roles, learning, orientation, planning, development, quality, maintenance), and monthly/quarterly maintenance cadence. Ensures prompt library remains high-quality and focused.
+
+---
+
 ## General AI Prompts
 
 ### general-prompts/tcrei-template.md
@@ -188,6 +204,8 @@ API design standards, conventions, and contracts template for consistent API dev
 
 ## Key Concepts
 
+**Meta-Layer for Continuous Improvement**: The meta/ folder contains workflows that ensure this templates repository evolves based on real-world usage. After completing projects, run meta/template-retrospective.md to identify prompt failures, template gaps, and documentation issues. Apply findings using meta/system-evolution.md guidance (backwards compatibility, versioning, maintenance cadence). Use meta/new-project-bootstrap.md for consistent project setup across all new work. Improve prompts following meta/prompt-evolution.md standards (quality criteria, testing protocol, deprecation path). This creates a feedback loop where every project makes templates better for the next one. The meta layer is for maintaining this repository, not for copying into downstream projects.
+
 **llms.txt Optimization Framework**: The LLM_TXT_STANDARDS.md defines a research-backed approach where "RAG with full documents as retrieval units" enables LLMs to reason about which files to read based on clear descriptions. Optimized descriptions must explain WHEN to read a file (use cases), WHAT you'll learn (specific concepts with function/class names), and WHY it matters (dependencies and relationships). This achieves 95% success rate vs 85% for vector databases or 70% for context stuffing.
 
 **AI-Native Development Template Kit**: The cursor/, prompts/, and project-templates/ folders work together to establish AI-native development practices. cursor/rules.md controls AI agent behavior (plan first, small changes, test-first). The six prompts/ files provide copy-paste workflows for common tasks (planning, debugging, feature development, testing, refactoring, PR writing). The ten project-templates/ files create persistent project memory for AI agents (llms.txt for navigation, memory.md for history, architecture.md for design, decisions.md for rationale, plus standards for testing/coding/deployment/APIs and planning docs like roadmap.md/tasks.md). Together they reduce hallucinations and improve AI coding assistant performance by providing clear context and behavioral expectations.
@@ -202,7 +220,7 @@ API design standards, conventions, and contracts template for consistent API dev
 
 ## Common Tasks
 
-**To set up a new project with AI-native templates**: Copy cursor/rules.md to .cursor/rules.md in the project root. Copy all files from project-templates/ to project root. Fill in placeholders marked with [BRACKETS] in each template file. Start with llms.txt, memory.md, and architecture.md as highest priority. Use prompts/ folder files by referencing them with @ in Cursor (e.g., @prompts/planning.md) or copy-paste as needed during development.
+**To set up a new project with AI-native templates**: Follow the canonical workflow in meta/new-project-bootstrap.md for complete step-by-step instructions. Quick version: Copy cursor/rules.md to .cursor/rules.md in the project root. Copy all files from project-templates/ to project root. Fill in placeholders marked with [BRACKETS] in each template file. Start with llms.txt, memory.md, and architecture.md as highest priority. Use prompts/ folder files by referencing them with @ in Cursor (e.g., @prompts/planning.md) or copy-paste as needed during development.
 
 **To create an llms.txt file for a new project**: Reference the LLM_TXT_STANDARDS.md file and use the command pattern shown in CREATE_LLM_TXT.md. Either auto-generate by having an AI scan all files and create descriptions following the standards, or manually fill in llms.txt.template with project-specific details. Optimize descriptions to explain when/what/why for each file.
 
@@ -218,6 +236,8 @@ API design standards, conventions, and contracts template for consistent API dev
 
 **To maintain llms.txt files**: Update whenever you add new files, refactor architecture, or add major features. Use the optimization checklist in LLM_TXT_STANDARDS.md to audit quality. Test by asking an AI to solve a task using only your llms.txt and observe if it retrieves the right files. Common maintenance triggers include adding 5+ new files, changing file organization, or updating function signatures referenced in descriptions.
 
+**To improve this templates repository**: After completing projects, run meta/template-retrospective.md to capture lessons learned. Identify prompt failures, template gaps, and documentation issues. Follow meta/system-evolution.md for guidance on updating templates safely, maintaining backwards compatibility, and versioning changes. Use meta/prompt-evolution.md to evaluate and improve prompt quality. Schedule monthly quick-checks and quarterly thorough reviews to keep templates current and effective.
+
 ---
 
 ## File Organization
@@ -226,6 +246,11 @@ API design standards, conventions, and contracts template for consistent API dev
 templates/
 ├── cursor/                    # Cursor AI behavioral rules
 │   └── rules.md              # Copy to .cursor/rules.md in projects
+├── meta/                      # Continuous improvement workflows
+│   ├── system-evolution.md   # How templates repository evolves
+│   ├── template-retrospective.md  # Post-project improvement process
+│   ├── new-project-bootstrap.md   # Canonical project setup workflow
+│   └── prompt-evolution.md   # Prompt library governance
 ├── general-prompts/           # General AI prompts (ChatGPT, Claude, etc)
 │   ├── tcrei-template.md     # TCREI structured prompt template
 │   ├── prompt-engineer.md    # Get AI help crafting prompts

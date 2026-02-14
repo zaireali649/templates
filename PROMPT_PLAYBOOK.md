@@ -156,6 +156,8 @@ Feel free to:
 - Combine prompts into your own workflows
 - Add prompts to your project's documentation
 
+**For maintainers**: See `meta/prompt-evolution.md` for guidance on creating, updating, testing, and retiring prompts in this library.
+
 ---
 
 ## Quick Access
