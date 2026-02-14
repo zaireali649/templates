@@ -63,23 +63,32 @@ Or copy-paste prompts as needed.
 
 ## For an Existing Project
 
-### Start Small
+**See `EXISTING_PROJECT_GUIDE.md` for detailed walkthrough.**
+
+### Quick Start
 
 1. **Add Cursor rules**:
    ```bash
    cp cursor/rules.md /path/to/project/.cursor/rules.md
    ```
 
-2. **Add core docs** (choose what's most valuable):
+2. **Add core docs** (priority order):
    ```bash
    cp project-templates/memory.md /path/to/project/
    cp project-templates/architecture.md /path/to/project/
    cp project-templates/decisions.md /path/to/project/
    ```
 
-3. **Document current state** in each file
+3. **Document what exists now** (not what you wish you had)
 
-4. **Add other templates** as needed over time
+4. **Add other templates** gradually as needed
+
+**Challenge**: Documenting existing systems without architecture.md? 
+See `EXISTING_PROJECT_GUIDE.md` for step-by-step help including:
+- How to mine git history for decisions
+- Using AI to help document your architecture
+- Prioritizing which templates to add first
+- Real examples and time estimates
 
 ---
 
