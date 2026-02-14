@@ -94,6 +94,7 @@ Workflows for evolving and improving this templates repository:
 - `template-retrospective.md` - Post-project review process
 - `new-project-bootstrap.md` - Canonical setup workflow
 - `prompt-evolution.md` - Prompt library governance
+- **`OPERATING_RHYTHM.md`** - Daily/monthly/quarterly maintenance cadence (start here!)
 
 **Note**: The `meta/` folder is for maintaining *this* templates repository, not for copying into downstream projects.
 

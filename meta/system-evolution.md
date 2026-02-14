@@ -323,6 +323,8 @@ Before releasing template updates:
 
 ## Getting Started
 
+**See `OPERATING_RHYTHM.md`** for the practical workflow of when to use this file.
+
 1. **After your next project**: Run `meta/template-retrospective.md`
 2. **Log improvements**: Note what worked and what didn't in `meta/lessons-queue.md`
 3. **Monthly check-in**: Review lessons and prioritize improvements

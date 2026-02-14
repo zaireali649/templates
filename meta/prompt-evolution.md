@@ -437,6 +437,8 @@ Only if 3+ prompts share distinct characteristics not covered by existing catego
 
 ## Maintenance Cadence
 
+**See `OPERATING_RHYTHM.md`** for the complete maintenance schedule including monthly and quarterly reviews.
+
 ### Monthly
 - [ ] Check for new prompt suggestions (issues, feedback)
 - [ ] Quick review: are prompts still accurate?

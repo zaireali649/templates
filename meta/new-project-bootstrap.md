@@ -14,6 +14,8 @@ This workflow ensures every new project starts with:
 
 **Use this checklist** for every new project to ensure nothing is missed.
 
+**See `OPERATING_RHYTHM.md`** for when to run this bootstrap as part of project kickoff rituals.
+
 ---
 
 ## Prerequisites

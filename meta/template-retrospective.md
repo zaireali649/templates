@@ -14,6 +14,8 @@ After completing a project (or major milestone), run this retrospective to:
 
 **Run this retrospective**: End of projects, major milestones, incidents, or quarterly reviews.
 
+**See `OPERATING_RHYTHM.md`** for when to trigger retrospectives as part of your workflow.
+
 ---
 
 ## Retrospective Setup

@@ -27,6 +27,9 @@ Comprehensive index and guide for all prompts with usage patterns. Read this fil
 ### PROMPT_CHEATSHEET.md
 One-page lookup table for quick prompt reference. Read this file to rapidly find what each prompt does without reading detailed explanations. Use this file when you see a prompt filename like "rage-mode" and need to quickly understand what it does, need fast lookup during active work, or want printable one-page reference. Includes three tables: general AI prompts table (name and one-sentence description), Cursor coding prompts table (name and one-sentence description), and quick workflows (new codebase, new feature, bug, refactor). Each entry is ultra-concise (under 15 words). Points to PROMPT_PLAYBOOK.md for detailed usage. Designed for speed - scan the table, find your prompt, use it.
 
+### OPERATING_RHYTHM.md
+Operational cadence and maintenance workflow for this templates repository. Read this file to understand daily workflows during active development (using memory.md, tasks.md, prompts/), project kickoff ritual (meta/new-project-bootstrap.md), milestone retrospective triggers (meta/template-retrospective.md after MVP/features/incidents), monthly maintenance sessions (30-60 min reviewing improvements), quarterly deep reviews (usage patterns, prompt effectiveness, bloat prevention), annual reviews (structure, archival, modernization), and the continuous improvement loop (projects → retros → improvements → updates → better future projects). Use this file when starting to use this templates repository, scheduling maintenance cadences, wondering when to run retrospectives, or ensuring the system compounds instead of becoming shelfware. Defines success indicators (faster project starts, better AI drafts, less context re-explanation, easier prompts, fewer template edits). Essential operational guide tying together the meta/ workflows into practical habits. Not copied into downstream projects - governs how this repository itself is maintained.
+
 ---
 
 ## Client Documentation Templates
@@ -204,7 +207,7 @@ API design standards, conventions, and contracts template for consistent API dev
 
 ## Key Concepts
 
-**Meta-Layer for Continuous Improvement**: The meta/ folder contains workflows that ensure this templates repository evolves based on real-world usage. After completing projects, run meta/template-retrospective.md to identify prompt failures, template gaps, and documentation issues. Apply findings using meta/system-evolution.md guidance (backwards compatibility, versioning, maintenance cadence). Use meta/new-project-bootstrap.md for consistent project setup across all new work. Improve prompts following meta/prompt-evolution.md standards (quality criteria, testing protocol, deprecation path). This creates a feedback loop where every project makes templates better for the next one. The meta layer is for maintaining this repository, not for copying into downstream projects.
+**Meta-Layer for Continuous Improvement**: The meta/ folder contains workflows that ensure this templates repository evolves based on real-world usage. Start with OPERATING_RHYTHM.md for the practical daily/monthly/quarterly cadence. After completing projects, run meta/template-retrospective.md to identify prompt failures, template gaps, and documentation issues. Apply findings using meta/system-evolution.md guidance (backwards compatibility, versioning, maintenance cadence). Use meta/new-project-bootstrap.md for consistent project setup across all new work. Improve prompts following meta/prompt-evolution.md standards (quality criteria, testing protocol, deprecation path). This creates a feedback loop where every project makes templates better for the next one. The meta layer is for maintaining this repository, not for copying into downstream projects.
 
 **llms.txt Optimization Framework**: The LLM_TXT_STANDARDS.md defines a research-backed approach where "RAG with full documents as retrieval units" enables LLMs to reason about which files to read based on clear descriptions. Optimized descriptions must explain WHEN to read a file (use cases), WHAT you'll learn (specific concepts with function/class names), and WHY it matters (dependencies and relationships). This achieves 95% success rate vs 85% for vector databases or 70% for context stuffing.
 
@@ -236,7 +239,7 @@ API design standards, conventions, and contracts template for consistent API dev
 
 **To maintain llms.txt files**: Update whenever you add new files, refactor architecture, or add major features. Use the optimization checklist in LLM_TXT_STANDARDS.md to audit quality. Test by asking an AI to solve a task using only your llms.txt and observe if it retrieves the right files. Common maintenance triggers include adding 5+ new files, changing file organization, or updating function signatures referenced in descriptions.
 
-**To improve this templates repository**: After completing projects, run meta/template-retrospective.md to capture lessons learned. Identify prompt failures, template gaps, and documentation issues. Follow meta/system-evolution.md for guidance on updating templates safely, maintaining backwards compatibility, and versioning changes. Use meta/prompt-evolution.md to evaluate and improve prompt quality. Schedule monthly quick-checks and quarterly thorough reviews to keep templates current and effective.
+**To improve this templates repository**: Start with OPERATING_RHYTHM.md to understand the daily/monthly/quarterly workflow. After completing projects, run meta/template-retrospective.md to capture lessons learned. Identify prompt failures, template gaps, and documentation issues. Follow meta/system-evolution.md for guidance on updating templates safely, maintaining backwards compatibility, and versioning changes. Use meta/prompt-evolution.md to evaluate and improve prompt quality. Schedule monthly quick-checks and quarterly thorough reviews to keep templates current and effective.
 
 ---
 
@@ -303,8 +306,9 @@ templates/
 ├── QUICK_START.md            # Quick start guide for using templates
 ├── EXISTING_PROJECT_GUIDE.md # Guide for adopting templates in existing projects
 ├── PROMPT_PLAYBOOK.md        # Index of all prompts with quick reference
+├── OPERATING_RHYTHM.md       # Maintenance cadence and workflow for this repository
 ├── llms.txt                   # This file - repository documentation map
-└── AI_REPO_CONTEXT.md        # Context for generating this template repository
+└── META_REPO_CONTEXT.md      # Context for generating this template repository
 ```
 
 ---
