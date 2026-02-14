@@ -1,0 +1,131 @@
+# [Project Name]
+
+> [One-sentence description of what this project does and its core technology stack]
+
+## Project Overview
+
+**Tech Stack**: [e.g., React, Node.js, PostgreSQL, AWS Lambda, Python/FastAPI]
+**Status**: [e.g., In Development, Production, Beta]
+**Purpose**: [What problem this solves and for whom]
+
+---
+
+## Core Documentation
+
+### README.md
+Project overview and setup instructions. Read this file to understand what the project does, how to get started, and basic usage. Essential first stop for new developers. Includes installation steps, prerequisites, and quick start guide.
+
+### memory.md
+Project memory and implementation history. Read this file to understand what has been built, when major changes happened, and the current state of the project. Updated after significant milestones. Reference this to avoid reimplementing features or repeating past mistakes.
+
+### architecture.md
+System architecture and component relationships. Read this file to understand how the system is structured, how components communicate, and key design patterns. Essential before making architectural changes. Includes data flow diagrams and technology decisions.
+
+### decisions.md
+Architecture Decision Records (ADRs). Read this file to understand why technical decisions were made, what alternatives were considered, and the context at the time. Reference before changing core technical approaches.
+
+### coding-standards.md
+Code style and engineering standards. Read this file to understand naming conventions, file organization, code review expectations, and quality standards. Follow these guidelines for all contributions.
+
+### testing.md
+Testing philosophy and requirements. Read this file to understand testing expectations, how to run tests, coverage requirements, and testing patterns. Reference before writing tests for new features.
+
+### api-contracts.md
+API design standards and conventions. Read this file to understand REST/GraphQL conventions, request/response patterns, error handling, and versioning strategy. Essential when building or modifying APIs.
+
+### deployment.md
+Deployment process and environments. Read this file to understand how to deploy the application, environment configuration, CI/CD pipelines, and rollback procedures. Reference before deploying changes.
+
+### roadmap.md
+Product roadmap and future direction. Read this file to understand upcoming features, long-term goals, and strategic priorities. Helps align work with product vision.
+
+### tasks.md
+Active tasks and sprint planning. Read this file to understand current work in progress, upcoming tasks, and priorities. Update this as tasks are completed and new work is identified.
+
+---
+
+## [Functional Area 1 - e.g., Backend API]
+
+### [path/to/main-file.ext]
+[Brief purpose statement]. Read this file to understand [concept 1], [concept 2], and [concept 3]. Use this file when [specific scenario]. Includes `function_name()`, `ClassName`, and key exports. [Dependencies or related files].
+
+### [path/to/another-file.ext]
+[Description following the same pattern]
+
+---
+
+## [Functional Area 2 - e.g., Frontend Components]
+
+### [path/to/component.jsx]
+[Description]
+
+---
+
+## [Functional Area 3 - e.g., Database Layer]
+
+### [migrations/001_initial.sql]
+[Description]
+
+---
+
+## Key Concepts
+
+**[Important Workflow or Pattern Name]**: 
+[Explanation of how this workflow operates in your system]
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+**[Another Important Concept]**: 
+[Explanation of architecture pattern, schema design, or technical approach]
+
+**[Technology-Specific Pattern]**: 
+[How a particular technology or framework is used in this project]
+
+---
+
+## Common Tasks
+
+**To [accomplish common task]**: 
+[Step-by-step instructions with file references and commands]
+
+**To [another common task]**: 
+[Instructions]
+
+**To [troubleshoot common issue]**: 
+[Debugging steps and common solutions]
+
+---
+
+## File Organization
+
+```
+project-root/
+├── src/                    # [Description]
+│   ├── api/               # [Description]
+│   ├── components/        # [Description]
+│   └── utils/            # [Description]
+├── tests/                 # [Description]
+├── docs/                  # [Description]
+├── memory.md             # Project memory
+├── architecture.md       # System design
+└── README.md             # Getting started
+```
+
+---
+
+## Environment Variables
+
+**Required**:
+- `DATABASE_URL` - [Description]
+- `API_KEY` - [Description]
+
+**Optional**:
+- `DEBUG_MODE` - [Description]
+- `LOG_LEVEL` - [Description]
+
+---
+
+**Last Updated**: [YYYY-MM-DD]
+**Project Version**: [Semantic version or git SHA]
+**Contributors**: [Team or contact info]
