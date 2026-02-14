@@ -66,7 +66,59 @@ Behavioral guidelines for AI coding assistants in projects. Read this file to un
 
 ---
 
-## Reusable Prompts
+## General AI Prompts
+
+### general-prompts/tcrei-template.md
+Universal TCREI prompt template for structured AI requests. Read this file to understand the Task-Context-Reference-Evaluation-Iteration framework for crafting high-quality prompts. Use this template when making complex requests, working on important deliverables, or needing multiple refinement rounds. Template structure: Task (what to produce), Context (audience/goal/constraints), Reference (examples or standards to match), Evaluation (critique and improve output), Iteration (ask what to refine next). Includes example usage and explanation of why each component matters. Works with any AI assistant (ChatGPT, Claude, Cursor). Grounds AI in expectations through examples and forces self-improvement through evaluation step.
+
+### general-prompts/prompt-engineer.md
+Meta-prompt for getting AI help to craft better prompts. Read this file to get AI assistance in refining your prompts through iterative questioning and improvement. Use when starting complex tasks, unsure how to phrase requests, want to ensure asking right questions, or need help structuring multi-step prompts. Process: AI asks clarifying questions, suggests improved prompt, repeats until excellent, then executes final prompt. Prevents trying to write perfect prompts yourself by letting AI guide you through best practices and important considerations you might have missed.
+
+### general-prompts/rage-mode.md
+Concise prompt format for getting straight answers without fluff. Read this file for a prompt that forces AI to be specific, ask up to 3 clarifying questions, then provide clear answer with 5 concrete steps. Use when needing quick actionable answers, don't have time for explanations, already understand basics, or want specific steps not theory. Prevents AI from being overly verbose, hedging with "it depends" without specifics, or giving generic advice. Example shows difference between verbose generic response vs specific actionable steps.
+
+### general-prompts/systems-architect.md
+Prompt for designing production-ready systems with AI acting as senior architect. Read this file to get comprehensive system designs including text-based architecture diagrams, component responsibilities, tradeoffs and alternatives, scaling plans, risks and mitigations, and step-by-step implementation plans. Use when starting new systems, evaluating architectural approaches, explaining architecture to stakeholders, scaling existing systems, or making build vs buy decisions. Provides production-ready designs with consideration of real-world constraints and operational concerns.
+
+### general-prompts/startup-cofounder.md
+Validate and refine startup ideas with AI as technical co-founder. Read this file to get structured startup validation including problem clarification, target user identification, market viability evaluation, MVP feature suggestions, monetization strategy, biggest risks, and next 7 actionable steps. Use when validating new ideas, stuck on monetization, need to prioritize features, want outside perspective, or planning MVP scope. Provides concrete next steps to validate ideas before building.
+
+### general-prompts/learning-accelerator.md
+Structured learning prompt for mastering new topics quickly. Read this file to get 6-phase learning structure: ELI5 explanation (simple metaphor), professional-level explanation (technical depth), real-world example (practical application), hands-on mini project (learning by doing), common mistakes to avoid (pitfalls), and 3 key takeaways (core concepts). Use when learning new technology, need to understand concepts quickly, preparing for interviews, evaluating whether to adopt tools, or teaching others. Builds intuition with simple explanation then fills in technical depth with examples and practice.
+
+### general-prompts/code-explainer.md
+Understand code from a debugging perspective. Read this file to get explanations covering high-level purpose, why each part exists, likely failure points, and improvement suggestions. Use when understanding unfamiliar code, doing code reviews, debugging issues, learning from examples, or refactoring legacy code. Goes beyond what code does to explain intent, potential problems, and better approaches. Helps identify issues before they occur.
+
+### general-prompts/self-critique.md
+Improve AI answers through forced self-criticism. Read this file to get a prompt pattern where AI gives best answer, critiques it harshly, identifies gaps and assumptions, then rewrites better version. Use for important decisions, when first answer feels incomplete, need comprehensive answers, or want to ensure nothing missed. First pass often misses nuance; criticism reveals blind spots and produces more thorough second version.
+
+### general-prompts/research-synthesizer.md
+Turn research into actionable briefings. Read this file to get structured research summaries including key findings (5-10 main points), consensus (what experts agree on), disagreements (where opinions diverge), implications (what this means), and action steps (what to do next). Use when researching best practices, making informed decisions, need executive summary, evaluating tools/approaches, or creating internal documentation. Distills research into decisions and actions rather than just information.
+
+### general-prompts/speed-summary.md
+Fast summarization format for getting to the point. Read this file for ultra-concise summary prompt: 5 bullet points (key information) and 1 "so what" takeaway (why it matters). Use for long documents/articles, meeting notes, research papers, email threads, or technical reports. Includes variations for ultra-fast (one sentence TL;DR) and detailed (10 bullets + takeaways + action items + questions). Saves time when consuming large amounts of information.
+
+### general-prompts/master-framework.md
+Comprehensive MASTER framework for complex prompts. Read this file to understand Context-Objective-Role-Constraints-Output format for structured requests. Use for complex strategic questions, multi-faceted problems, need expert-level guidance, lots of context matters, or specific output format needed. Context (background/situation), Objective (what to achieve with success criteria), Role (expertise AI should assume), Constraints (limitations/requirements/boundaries), Output format (response structure). Includes detailed example showing how to apply framework to real scenario (microservice migration).
+
+---
+
+## Cursor Development Prompts
+
+### prompts/understand-codebase.md
+Critical first prompt for any new repository. Read this file to get structured prompt for AI to study repository and explain what application does, tech stack used, architecture overview, key entry points, how to run locally, and risky/complex areas. Use as FIRST PROMPT in any new repo, when joining new project, contributing to open source, before making significant changes, or after being away from codebase for months. Builds mental map before making changes. Time investment 2-3 minutes saves hours of fixing bad suggestions based on wrong assumptions. Includes follow-up questions for deeper understanding of user flows, authentication, and dependencies. Combine with architecture.md if it exists to ground AI in documented architecture.
+
+### prompts/repository-map.md
+Create structural mental model of codebase. Read this file to get prompt for generating folder structure summary, responsibilities of each major folder, and how key services/modules interact. Use when new to codebase, before starting cross-cutting feature, planning refactoring, documenting for team, or code reviewing structural changes. Gives clear understanding of where things belong and how components relate. Like reading table of contents before reading book. Includes follow-up questions for data flow, specific features, and external dependencies. Use alongside understand-codebase.md: first understand what it does, then understand how it's organized.
+
+### prompts/task-splitter.md
+Break large features into small safe completable steps. Read this file to get prompt for decomposing features into steps where each is completable in one session, independently testable, doesn't break existing functionality, and builds logically on previous steps. Use when starting large features, feeling overwhelmed by scope, before sprint planning, breaking down epics, or when estimates are too large. Provides clear scope, definition of done, testing approach, and risk assessment for each step. Includes example showing feature broken from vague "add user profile" into 6 concrete steps. Follow-up questions help identify files to modify, risks, and whether steps can be parallelized. Combine with planning.md to plan implementation for each step.
+
+### prompts/follow-project-rules.md
+Ensure AI follows established project patterns and standards. Read this file to get prompt that instructs AI to implement features following rules in architecture.md, coding-standards.md, testing.md, and api-contracts.md while matching existing code style. Use for every feature implementation, when onboarding AI to project, after establishing new standards, when consistency is critical, or working with junior developers. Without this AI invents new patterns and breaks conventions; with this AI follows established practices and maintains consistency. Includes variations for specific standards (coding only, architecture only, testing only) and example showing difference between invented pattern vs following project conventions. Best practice: reference project docs at start of each session to ground AI before making suggestions.
+
+### prompts/update-memory.md
+Keep project memory current after completing work. Read this file to get structured prompt for updating memory.md with what was implemented, key decisions made, files changed, remaining work, and notes for future. Use after completing features, making architectural changes, fixing significant bugs, making important decisions, or merging major PRs. Prevents context loss, preserves decisions, documents known issues, and speeds onboarding. Includes detailed example showing what to document (2FA implementation with decisions, files, remaining work, notes). Update at minimum after every merged PR; ideally daily for active development; critically before knowledge transfer. Combine with PR workflow: create PR description with pr-writing.md, then update memory after merging. AI can help draft update which you review and refine.
 
 ### prompts/planning.md
 Copy-paste prompt for feature planning before implementation. Read this file to get a structured prompt that guides AI through reading relevant documentation (memory.md, architecture.md, decisions.md, tasks.md), creating an implementation plan with files to modify/create and step-by-step approach, identifying existing patterns and dependencies, and noting edge cases and testing strategy. Use this prompt when starting new features, making architectural changes, working on unfamiliar code, handling complex requirements, or before significant refactoring. Ensures alignment and prevents rework by forcing upfront planning. Includes sections explaining why this approach works (prevents rework, reduces bugs, maintains consistency, enables better reviews, documents decisions) and when to use it. Designed for Cursor AI but works with any AI coding assistant. Emphasizes waiting for approval before proceeding with implementation.
@@ -142,7 +194,9 @@ API design standards, conventions, and contracts template for consistent API dev
 
 **To create an llms.txt file for a new project**: Reference the LLM_TXT_STANDARDS.md file and use the command pattern shown in CREATE_LLM_TXT.md. Either auto-generate by having an AI scan all files and create descriptions following the standards, or manually fill in llms.txt.template with project-specific details. Optimize descriptions to explain when/what/why for each file.
 
-**To use the development prompts effectively**: Reference prompts using @ syntax in Cursor before starting work. Use @prompts/planning.md before implementing features to create a plan first. Use @prompts/debugging.md when investigating bugs to follow systematic debugging. Use @prompts/feature-dev.md for test-first feature development. Use @prompts/testing.md when adding tests. Use @prompts/refactoring.md before restructuring code. Use @prompts/pr-writing.md when creating pull requests. The prompts guide AI agents through best-practice workflows for each task type.
+**To use the development prompts effectively**: Start every new codebase with @prompts/understand-codebase.md then @prompts/repository-map.md to build context. Reference prompts using @ syntax in Cursor before starting work. Use @prompts/planning.md or @prompts/task-splitter.md before implementing features. Use @prompts/follow-project-rules.md to ensure AI follows your architecture and standards. Use @prompts/debugging.md when investigating bugs. Use @prompts/feature-dev.md for test-first development. Use @prompts/refactoring.md before restructuring code. Use @prompts/pr-writing.md when creating pull requests, then @prompts/update-memory.md after merging. The prompts guide AI agents through best-practice workflows for each task type.
+
+**To use general AI prompts**: Reference prompts from general-prompts/ folder for any AI assistant (ChatGPT, Claude, etc). Use @general-prompts/tcrei-template.md or @general-prompts/master-framework.md for complex requests. Use @general-prompts/rage-mode.md when you need quick actionable answers. Use @general-prompts/systems-architect.md for designing systems, @general-prompts/startup-cofounder.md for validating ideas, or @general-prompts/learning-accelerator.md for mastering new topics. Use @general-prompts/self-critique.md for important work needing extra thoroughness. Use @general-prompts/prompt-engineer.md to get AI help crafting better prompts. See PROMPT_PLAYBOOK.md for complete index and usage patterns.
 
 **To prepare a monthly client report**: Copy MONTHLY_REPORT.template.md to a new file with naming pattern like "2025-10-ClientName-Monthly-Report.md". Fill in all bracketed placeholders starting with executive summary (hours used/remaining, key accomplishments), then detailed time logs, work completed by category, system metrics if applicable, costs, and upcoming work. Deliver by the agreed date each month (typically 1st-5th of following month).
 
@@ -160,7 +214,24 @@ API design standards, conventions, and contracts template for consistent API dev
 templates/
 ├── cursor/                    # Cursor AI behavioral rules
 │   └── rules.md              # Copy to .cursor/rules.md in projects
-├── prompts/                   # Reusable development prompts
+├── general-prompts/           # General AI prompts (ChatGPT, Claude, etc)
+│   ├── tcrei-template.md     # TCREI structured prompt template
+│   ├── prompt-engineer.md    # Get AI help crafting prompts
+│   ├── rage-mode.md          # Straight answers, no fluff
+│   ├── systems-architect.md  # Design production systems
+│   ├── startup-cofounder.md  # Validate startup ideas
+│   ├── learning-accelerator.md  # Master topics quickly
+│   ├── code-explainer.md     # Understand code deeply
+│   ├── self-critique.md      # Improve AI answers
+│   ├── research-synthesizer.md  # Research briefings
+│   ├── speed-summary.md      # Fast summarization
+│   └── master-framework.md   # Comprehensive prompt structure
+├── prompts/                   # Cursor development prompts
+│   ├── understand-codebase.md  # First prompt in any repo
+│   ├── repository-map.md     # Understand folder structure
+│   ├── task-splitter.md      # Break features into steps
+│   ├── follow-project-rules.md  # Follow architecture/standards
+│   ├── update-memory.md      # Keep memory.md current
 │   ├── planning.md           # Feature planning workflow
 │   ├── debugging.md          # Systematic debugging
 │   ├── feature-dev.md        # Test-first feature development
@@ -192,6 +263,9 @@ templates/
 │   ├── ml_oncall_runbooks_master.md
 │   └── ml_oncall_runbooks_master_short.md
 ├── README.md                  # Repository overview and usage guide
+├── QUICK_START.md            # Quick start guide for using templates
+├── EXISTING_PROJECT_GUIDE.md # Guide for adopting templates in existing projects
+├── PROMPT_PLAYBOOK.md        # Index of all prompts with quick reference
 ├── llms.txt                   # This file - repository documentation map
 └── AI_REPO_CONTEXT.md        # Context for generating this template repository
 ```

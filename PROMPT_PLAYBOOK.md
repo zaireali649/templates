@@ -1,326 +1,174 @@
 # Prompt Playbook
 
-This file contains reusable prompts gathered and refined for daily use
-with ChatGPT and Cursor.
+Reusable prompts for ChatGPT, Claude, and Cursor. All prompts have been organized into dedicated files.
 
-------------------------------------------------------------------------
+---
 
-# Universal TCREI Prompt Template
+## General AI Prompts
 
-TASK:
-Here is what I need you to produce:
+For use with ChatGPT, Claude, or any AI assistant.
 
-CONTEXT:
-Audience: who it is for
-Goal: Here is why
-Constraint: the constraints
+Located in `general-prompts/`:
 
-REFERENCE:
-Here are examples, standards, or prior work to match:
+### Prompt Frameworks
+- **[TCREI Template](general-prompts/tcrei-template.md)** - Structured prompt template (Task, Context, Reference, Evaluation, Iteration)
+- **[MASTER Framework](general-prompts/master-framework.md)** - Comprehensive structure (Context, Objective, Role, Constraints, Output)
+- **[Prompt Engineer](general-prompts/prompt-engineer.md)** - Get AI help to craft better prompts
 
-EVALUATION:
-After you produce the answer, critique it and improve it.
+### Quick Formats
+- **[Rage Mode](general-prompts/rage-mode.md)** - Get straight answers, no fluff, 5 concrete steps
+- **[Speed Summary](general-prompts/speed-summary.md)** - Summarize into 5 bullets + 1 "so what" takeaway
 
-ITERATION:
-Ask me what to refine next.
+### Specialized Roles
+- **[Systems Architect](general-prompts/systems-architect.md)** - Design production-ready systems with tradeoffs and scaling plans
+- **[Startup Co-founder](general-prompts/startup-cofounder.md)** - Validate ideas, find MVP features, identify risks
+- **[Code Explainer](general-prompts/code-explainer.md)** - Understand code like you're debugging it
 
+### Learning & Research
+- **[Learning Accelerator](general-prompts/learning-accelerator.md)** - Master topics with ELI5 → professional → hands-on structure
+- **[Research Synthesizer](general-prompts/research-synthesizer.md)** - Turn research into actionable briefings
+- **[Self-Critique Loop](general-prompts/self-critique.md)** - Get AI to critique and improve its own answers
 
-------------------------------------------------------------------------
+---
 
-# Prompt Engineer Prompt
+## Cursor Development Prompts
 
-You are a prompt engineer helping me craft the best possible prompt.
+For use with Cursor AI coding assistant.
 
-Process 1 Ask clarifying questions about the task. 2 Suggest an improved
-prompt. 3 Repeat until the prompt is excellent. 4 Execute the final
-prompt.
+Located in `prompts/`:
 
-Start by asking what I want to accomplish.
+### Getting Started (Use These First)
+- **[Understand Codebase](prompts/understand-codebase.md)** - ⭐ **START HERE** - Map the repository before making changes
+- **[Repository Map](prompts/repository-map.md)** - Understand folder structure and component interactions
+- **[Follow Project Rules](prompts/follow-project-rules.md)** - Ensure AI follows your architecture and coding standards
 
-------------------------------------------------------------------------
+### Planning & Organization
+- **[Planning](prompts/planning.md)** - Comprehensive feature planning workflow (detailed)
+- **[Task Splitter](prompts/task-splitter.md)** - Break large features into small, safe steps
 
-# Rage Prompt
+### Development Workflows
+- **[Feature Development](prompts/feature-dev.md)** - Test-first feature development with incremental implementation
+- **[Debugging](prompts/debugging.md)** - Systematic debugging workflow (investigate root cause first)
+- **[Testing](prompts/testing.md)** - Write comprehensive tests with coverage analysis
+- **[Refactoring](prompts/refactoring.md)** - Safe refactoring without changing behavior
 
-Do not be vague. Do not overexplain. Ask up to 3 questions if needed.
-Then give a clear answer and 5 concrete steps.
+### Finishing Work
+- **[PR Writing](prompts/pr-writing.md)** - Create comprehensive pull request descriptions
+- **[Update Memory](prompts/update-memory.md)** - Keep project memory current after completing work
 
-------------------------------------------------------------------------
+---
 
-# Systems Architect Prompt
+## Quick Reference
 
-Act as a senior systems architect.
+### First Time in a Codebase
+```
+1. @prompts/understand-codebase.md
+2. @prompts/repository-map.md
+3. Start working with context
+```
 
-Goal: design a production-ready solution.
+### Starting a Feature
+```
+1. @prompts/planning.md or @prompts/task-splitter.md
+2. @prompts/feature-dev.md (test-first development)
+3. @prompts/update-memory.md (after completion)
+```
 
-Include:
-- architecture diagram (text)
-- components and responsibilities
-- tradeoffs
-- scaling plan
-- risks and mitigations
-- step-by-step implementation plan
+### Investigating a Bug
+```
+@prompts/debugging.md - Root cause analysis first, then fix
+```
 
+### Before Submitting Work
+```
+1. @prompts/pr-writing.md - Document changes
+2. @prompts/update-memory.md - Update project context
+```
 
-------------------------------------------------------------------------
+---
 
-# Startup Cofounder Prompt
+## Advanced Patterns
 
-Act as my technical co-founder.
+### Prompt Chaining
 
-For this idea:
-1) Clarify the problem.
-2) Identify target users.
-3) Evaluate market viability.
-4) Suggest MVP features.
-5) Suggest monetization.
-6) Identify biggest risks.
-7) Give next 7 actions.
+Instead of one massive prompt, chain smaller focused prompts:
 
+**Example - Building a SaaS**:
+```
+Prompt 1: @general-prompts/startup-cofounder.md → Validate idea
+Prompt 2: @general-prompts/systems-architect.md → Design architecture  
+Prompt 3: @prompts/task-splitter.md → Break into steps
+Prompt 4: @prompts/feature-dev.md → Implement incrementally
+Prompt 5: @prompts/update-memory.md → Document progress
+```
 
-------------------------------------------------------------------------
+### Multi-Step Workflows
 
-# Learning Accelerator Prompt
+Combine prompts for complex tasks:
 
-Teach me [topic].
+**Example - Major Refactor**:
+```
+1. @prompts/understand-codebase.md - Understand current state
+2. @prompts/planning.md - Plan refactoring approach
+3. @prompts/refactoring.md - Execute safe refactoring
+4. @prompts/testing.md - Ensure no regressions
+5. @prompts/pr-writing.md - Document changes
+```
 
-Structure:
-1) Explain like I'm 5.
-2) Explain at professional level.
-3) Real-world example.
-4) Hands-on mini project.
-5) Common mistakes.
-6) 3 key takeaways.
+---
 
+## Pro Tips
 
-------------------------------------------------------------------------
+### Ground AI in Your Project
 
-# Code Debugging Explanation Prompt
+Always reference project docs when starting work:
+```
+Before we start, read:
+@architecture.md
+@coding-standards.md
+@memory.md
 
-Explain this code like I’m debugging it.
+Now implement [feature] following our patterns.
+```
 
-Include:
-- what it does
-- why each part exists
-- likely failure points
-- how to improve it
+### Iterative Improvement
 
+Use self-critique for important work:
+```
+@general-prompts/self-critique.md
 
-------------------------------------------------------------------------
+Give your best answer for: [complex question]
+Then critique it and improve it.
+```
 
-# Self Critique Loop Prompt
+### Speed vs Depth
 
-Give your best answer.
+**Need speed?**: Use `@general-prompts/rage-mode.md`  
+**Need depth?**: Use `@general-prompts/tcrei-template.md` or `@general-prompts/master-framework.md`
 
-Then:
-1) Critique it like a harsh reviewer.
-2) Identify gaps and assumptions.
-3) Rewrite a better version.
+---
 
+## Customization
 
-------------------------------------------------------------------------
+Feel free to:
+- Modify prompts for your workflow
+- Create project-specific variants
+- Combine prompts into your own workflows
+- Add prompts to your project's documentation
 
-# Research Synthesizer Prompt
+---
 
-Create a research briefing.
+## Quick Access
 
-Include:
-- key findings
-- consensus
-- disagreements
-- implications
-- action steps
+Copy prompts you use frequently to a scratchpad or add them to your IDE snippets.
 
+**Example snippet**:
+```
+// Quick debug prompt
+@prompts/debugging.md - Bug: [describe issue]
+Investigate root cause first.
+```
 
-------------------------------------------------------------------------
+---
 
-# Life Systems Engineer Prompt
-
-Act as my life systems engineer.
-
-Design systems for:
-- work
-- health
-- finances
-- family
-- learning
-
-Make it structured, measurable, and gamified.
-
-
-------------------------------------------------------------------------
-
-# Speed Summary Prompt
-
-Summarize this into:
-- 5 bullet points
-- 1 "so what" takeaway
-
-
-------------------------------------------------------------------------
-
-# Cursor Planning Prompt
-
-Do not write code yet.
-
-Plan the implementation for:
-[feature]
-
-Include:
-- files to modify
-- new files to create
-- step-by-step plan
-- potential risks
-
-
-------------------------------------------------------------------------
-
-# Cursor Debug Prompt
-
-Bug:
-[describe bug]
-
-Investigate root cause.
-Do NOT patch symptoms.
-Explain the cause before fixing.
-
-
-------------------------------------------------------------------------
-
-# Cursor Test First Prompt
-
-Write unit tests for this feature before implementation.
-
-Focus on:
-- edge cases
-- failure scenarios
-- expected behavior
-
-After test approval, Implement the code so these tests pass.
-
-------------------------------------------------------------------------
-
-# Cursor Refactor Prompt
-
-Refactor code to improve readability maintainability and performance. Do
-not change behavior. Explain changes first.
-
-------------------------------------------------------------------------
-
-# Cursor PR Prompt
-
-Create a pull request description.
-
-Include Summary Changes made Testing steps Risks
-
-------------------------------------------------------------------------
-
-# The Prompt Engineer Prompt (META prompt)
-
-You are a prompt engineer helping me craft the best possible prompt.
-
-Process:
-1) Ask me clarifying questions about the task.
-2) Suggest an improved prompt.
-3) Repeat until the prompt is excellent.
-4) Then execute the final prompt.
-
-Start by asking what I want to accomplish.
-
-------------------------------------------------------------------------
-
-# The Prompt Chaining Pattern (VERY advanced)
-
-Instead of:
-
-“Build a SaaS”
-
-Do:
-
-Prompt 1 → brainstorm ideas
-Prompt 2 → validate idea
-Prompt 3 → MVP features
-Prompt 4 → architecture
-Prompt 5 → roadmap
-
-
-------------------------------------------------------------------------
-
-# The MASTER Framework
-
-Context:
-Objective:
-Role:
-Constraints:
-Output format:
-
-------------------------------------------------------------------------
-
-# The “Understand the Codebase” Prompt (FIRST PROMPT ALWAYS)
-Study this repository and explain:
-
-- what the application does
-- tech stack used
-- architecture overview
-- key entry points
-- how to run locally
-- risky or complex areas
-
-------------------------------------------------------------------------
-
-# The “Repository Map” Prompt
-Create a mental map of this repo.
-
-Output:
-- folder structure summary
-- responsibilities of each major folder
-- key services/modules and how they interact
-
-------------------------------------------------------------------------
-
-# The “Small Task Splitter”
-Break this feature into the smallest safe steps.
-Each step should be completable in one prompt.
-
-------------------------------------------------------------------------
-
-# The “Follow Project Rules” Prompt
-Implement this feature.
-Follow the rules in @architecture.md and @coding-standards.md.
-
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
-------------------------------------------------------------------------
+**See individual prompt files for detailed usage, examples, and variations.**
