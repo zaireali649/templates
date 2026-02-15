@@ -19,6 +19,20 @@ Behavioral rules for Cursor AI that promote:
 
 **Usage**: Copy `cursor/rules.md` to `.cursor/rules.md` in your project root.
 
+### 🎭 AI-Native Development (`meta/personas/`)
+
+This template includes a reusable AI persona system.
+
+Personas live in:
+`meta/personas/`
+
+Every new repo should copy the default persona into:
+`.cursor/rules/`
+
+This ensures consistent AI collaboration across projects.
+
+**Usage**: Copy `meta/personas/jordan-persona.md` to `.cursor/rules/jordan.md` in your project.
+
 ### 📋 Reusable Prompts (`prompts/`)
 
 Copy-paste prompts optimized for small, focused tasks:
@@ -53,35 +67,44 @@ Core documentation files that provide persistent context for AI:
 
 ### For a New Project
 
-1. **Copy Cursor rules**:
+1. **Set up AI persona**:
+   ```bash
+   mkdir -p /path/to/your-project/.cursor/rules/
+   cp meta/personas/jordan-persona.md /path/to/your-project/.cursor/rules/jordan.md
+   ```
+
+2. **Copy Cursor rules**:
    ```bash
    cp cursor/rules.md /path/to/your-project/.cursor/rules.md
    ```
 
-2. **Copy project templates**:
+3. **Copy project templates**:
    ```bash
    cp -r project-templates/* /path/to/your-project/
    ```
 
-3. **Customize templates**:
+4. **Customize templates**:
    - Fill in placeholders marked with `[BRACKETS]`
    - Update project-specific information
    - Remove sections that don't apply
 
-4. **Use prompts as needed**:
+5. **Use prompts as needed**:
    - Reference during development: `@prompts/feature-dev.md`
    - Or keep templates folder accessible for copy-paste
 
 ### For an Existing Project
 
-1. Start with core documentation:
-   - Copy `memory.md`, `architecture.md`, and `decisions.md`
-   - Document current state and historical context
+1. Set up AI persona:
+   - Copy `meta/personas/jordan-persona.md` to `.cursor/rules/jordan.md`
 
 2. Add Cursor rules:
    - Copy `cursor/rules.md` to `.cursor/rules.md`
 
-3. Gradually adopt other templates as needed
+3. Start with core documentation:
+   - Copy `memory.md`, `architecture.md`, and `decisions.md`
+   - Document current state and historical context
+
+4. Gradually adopt other templates as needed
 
 ---
 
@@ -94,9 +117,10 @@ Workflows for evolving and improving this templates repository:
 - `template-retrospective.md` - Post-project review process
 - `new-project-bootstrap.md` - Canonical setup workflow
 - `prompt-evolution.md` - Prompt library governance
+- `personas/` - Reusable AI personas for consistent collaboration
 - **`OPERATING_RHYTHM.md`** - Daily/monthly/quarterly maintenance cadence (start here!)
 
-**Note**: The `meta/` folder is for maintaining *this* templates repository, not for copying into downstream projects.
+**Note**: The `meta/` folder is for maintaining *this* templates repository. Copy `meta/personas/` files into downstream projects as needed.
 
 ### Client Documentation (`client-docs/`)
 

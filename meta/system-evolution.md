@@ -148,6 +148,41 @@ Review `cursor/rules.md` for:
 
 ---
 
+## AI Persona Evolution
+
+The repository maintains reusable AI personas to ensure consistent
+AI collaboration across projects.
+
+### Default Persona
+Jordan is the default AI collaborator persona located at:
+
+meta/personas/jordan-persona.md
+
+### When to Update Personas
+Update personas when:
+- Repeated friction appears across projects
+- Communication style needs refinement
+- New collaboration patterns emerge
+- New tooling requires behavior changes
+
+### Versioning Rule
+Persona updates should:
+1. Be backwards compatible when possible
+2. Include rationale in commit messages
+3. Be treated as system-level changes
+
+### Persona Maintenance Cadence
+
+AI personas are part of the system infrastructure.
+
+Cadence:
+- Weekly: No changes
+- Monthly: Small tweaks only if repeated friction appears
+- Quarterly: Formal persona retrospective and updates
+- Yearly: Major structural revisions if needed
+
+---
+
 ## Capturing Lessons from Real Projects
 
 ### What to Capture

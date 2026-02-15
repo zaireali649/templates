@@ -19,15 +19,36 @@ Your project has:
 
 ---
 
-## Phase 1: Add Cursor Rules (5 minutes)
+## Phase 1: AI Setup (10 minutes)
 
 Start here - this improves AI behavior immediately.
+
+### Step 1: Set Up AI Persona
+
+Every repository should include:
+
+1. Create Cursor rules folder:
+   ```bash
+   mkdir -p /path/to/project/.cursor/rules/
+   ```
+
+2. Copy default persona:
+   ```bash
+   cp meta/personas/jordan-persona.md /path/to/project/.cursor/rules/jordan.md
+   ```
+
+3. Reference the persona in README:
+   ```markdown
+   This project uses the "Jordan" AI persona for AI-assisted development.
+   ```
+
+### Step 2: Add Cursor Rules
 
 ```bash
 cp cursor/rules.md /path/to/project/.cursor/rules.md
 ```
 
-**Benefit**: AI will now read docs before coding, make smaller changes, ask questions when unclear.
+**Benefit**: AI will now use consistent persona, read docs before coding, make smaller changes, and ask questions when unclear.
 
 ---
 
@@ -382,6 +403,8 @@ Document current API conventions and major endpoints.
 ## Quick Migration Checklist
 
 **Day 1** (1 hour):
+- [ ] Create .cursor/rules/ folder
+- [ ] Copy meta/personas/jordan-persona.md to .cursor/rules/jordan.md
 - [ ] Copy cursor/rules.md to .cursor/rules.md
 - [ ] Copy memory.md and fill in "Current State"
 - [ ] Add 3-5 history entries to memory.md
