@@ -10,7 +10,28 @@ How to use these templates in your projects.
 
 **Quick start** (simplified version):
 
-### 1. Copy Cursor Rules
+### 1. Set Up AI Persona
+
+Every new repository must include:
+
+1. Create Cursor rules folder:
+   `.cursor/rules/`
+
+2. Copy default persona:
+   ```bash
+   cp meta/personas/jordan-persona.md /path/to/your-project/.cursor/rules/jordan.md
+   ```
+
+3. Reference the persona in README:
+   ```markdown
+   This project uses the "Jordan" AI persona for AI-assisted development.
+   ```
+
+This ensures consistent AI collaboration across projects.
+
+---
+
+### 2. Copy Cursor Rules
 ```bash
 cp cursor/rules.md /path/to/your-project/.cursor/rules.md
 ```
@@ -19,7 +40,7 @@ This sets AI behavior expectations (plan first, small changes, test-first).
 
 ---
 
-### 2. Copy Project Templates
+### 3. Copy Project Templates
 ```bash
 cp -r project-templates/* /path/to/your-project/
 ```
@@ -38,7 +59,7 @@ This gives you 10 documentation files:
 
 ---
 
-### 3. Fill in Placeholders
+### 4. Fill in Placeholders
 
 Replace all `[BRACKETS]` with your project details:
 - Project name and description
@@ -50,7 +71,7 @@ Start with `llms.txt`, `memory.md`, and `architecture.md` first.
 
 ---
 
-### 4. Use Prompts During Development
+### 5. Use Prompts During Development
 
 Reference prompts in Cursor with `@`:
 
@@ -71,21 +92,27 @@ Or copy-paste prompts as needed.
 
 ### Quick Start
 
-1. **Add Cursor rules**:
+1. **Set up AI persona**:
+   ```bash
+   mkdir -p /path/to/project/.cursor/rules/
+   cp meta/personas/jordan-persona.md /path/to/project/.cursor/rules/jordan.md
+   ```
+
+2. **Add Cursor rules**:
    ```bash
    cp cursor/rules.md /path/to/project/.cursor/rules.md
    ```
 
-2. **Add core docs** (priority order):
+3. **Add core docs** (priority order):
    ```bash
    cp project-templates/memory.md /path/to/project/
    cp project-templates/architecture.md /path/to/project/
    cp project-templates/decisions.md /path/to/project/
    ```
 
-3. **Document what exists now** (not what you wish you had)
+4. **Document what exists now** (not what you wish you had)
 
-4. **Add other templates** gradually as needed
+5. **Add other templates** gradually as needed
 
 **Challenge**: Documenting existing systems without architecture.md? 
 See `EXISTING_PROJECT_GUIDE.md` for step-by-step help including:
@@ -137,14 +164,18 @@ Incident response procedures for ML systems.
 mkdir my-app && cd my-app
 git init
 
-# 2. Copy templates
+# 2. Set up AI persona
+mkdir -p .cursor/rules/
+cp ~/templates/meta/personas/jordan-persona.md .cursor/rules/jordan.md
+
+# 3. Copy templates
 cp ~/templates/cursor/rules.md .cursor/rules.md
 cp -r ~/templates/project-templates/* .
 
-# 3. Fill in placeholders
+# 4. Fill in placeholders
 # Edit llms.txt, memory.md, architecture.md with your project info
 
-# 4. Start coding with AI
+# 5. Start coding with AI
 # Reference @prompts/planning.md before features
 # AI follows .cursor/rules.md automatically
 # AI reads your project docs for context
